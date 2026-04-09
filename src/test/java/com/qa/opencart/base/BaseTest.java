@@ -50,10 +50,10 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void attachScreenshot(ITestResult result) {
-//		if(!result.isSuccess()) {
-//			ChainTestListener.embed(DriverFactory.getScreenshotFile(), "image/png");
-//		}
-		ChainTestListener.embed(DriverFactory.getScreenshotFile(), "image/png");
+		if(!result.isSuccess()) {
+			ChainTestListener.embed(DriverFactory.getScreenshotFile(), "image/png");
+		}
+	//	ChainTestListener.embed(DriverFactory.getScreenshotFile(), "image/png");
 	}
 	
 	@AfterTest
